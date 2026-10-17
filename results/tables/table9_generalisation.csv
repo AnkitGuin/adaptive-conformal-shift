@@ -1,0 +1,21 @@
+Model,Scenario,Static split,Rolling window,Exp. weighted,ACI,DA-ACP
+ridge,A': Natural (chronological),0.894 / 690,0.904 / 662,0.914 / 661,0.900 / 670,0.909 / 660*
+ridge,C: Abrupt covariate,0.893 / 660,0.904 / 636*,0.915 / 638,0.900 / 646,0.908 / 638
+ridge,D: Noise increase,0.880 / 718,0.904 / 699,0.915 / 698,0.900 / 711,0.909 / 695*
+ridge,E: Conditional shift,0.814 / 1135,0.908 / 1015*,0.917 / 1021,0.900 / 1017,0.911 / 1022
+ridge,A: IID control,0.901 / 475,0.901 / 460,0.914 / 456,0.900 / 473,0.907 / 453*
+random_forest,A': Natural (chronological),0.874 / 553,0.906 / 528,0.916 / 529,0.900 / 532,0.911 / 527*
+random_forest,C: Abrupt covariate,0.854 / 639,0.901 / 577*,0.915 / 579,0.900 / 578,0.911 / 581
+random_forest,D: Noise increase,0.848 / 605,0.905 / 575,0.916 / 576,0.900 / 586,0.910 / 573*
+random_forest,E: Conditional shift,0.732 / 1199,0.901 / 923,0.919 / 918,0.901 / 900*,0.916 / 921
+random_forest,A: IID control,0.902 / 212,0.899 / 212,0.914 / 209*,0.900 / 224,0.909 / 209
+gbr,A': Natural (chronological),0.841 / 498,0.905 / 465,0.915 / 465,0.900 / 471,0.910 / 465*
+gbr,C: Abrupt covariate,0.810 / 627,0.896 / 537*,0.909 / 538,0.900 / 545,0.906 / 542
+gbr,D: Noise increase,0.802 / 574,0.904 / 516,0.913 / 516,0.900 / 529,0.908 / 515*
+gbr,E: Conditional shift,0.682 / 1231,0.899 / 853,0.916 / 847,0.901 / 830*,0.915 / 851
+gbr,A: IID control,0.900 / 209,0.899 / 207,0.913 / 205,0.900 / 219,0.908 / 204*
+hgb,A': Natural (chronological),0.851 / 522,0.907 / 488*,0.917 / 491,0.900 / 497,0.913 / 490
+hgb,C: Abrupt covariate,0.816 / 664,0.902 / 580*,0.914 / 582,0.900 / 582,0.910 / 584
+hgb,D: Noise increase,0.810 / 593,0.907 / 540,0.916 / 542,0.900 / 553,0.911 / 540*
+hgb,E: Conditional shift,0.684 / 1244,0.899 / 883,0.918 / 878,0.901 / 857*,0.917 / 881
+hgb,A: IID control,0.898 / 200,0.899 / 200,0.912 / 197,0.900 / 213,0.907 / 197*

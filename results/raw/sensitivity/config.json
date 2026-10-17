@@ -1,0 +1,491 @@
+{
+  "data": {
+    "source": "bike_sharing",
+    "path": "data/raw/hour.csv",
+    "date_col": "dteday",
+    "hour_col": "hr",
+    "timestamp_col": null,
+    "target": "cnt",
+    "forbidden_features": [
+      "casual",
+      "registered",
+      "instant",
+      "dteday"
+    ]
+  },
+  "features": {
+    "numeric": [
+      "temp",
+      "atemp",
+      "hum",
+      "windspeed"
+    ],
+    "binary": [
+      "holiday",
+      "workingday",
+      "yr"
+    ],
+    "categorical": [
+      "weathersit",
+      "season",
+      "weekday"
+    ],
+    "cyclic": {
+      "hr": 24,
+      "mnth": 12,
+      "weekday": 7
+    },
+    "onehot_extra": [
+      "hr"
+    ]
+  },
+  "feature_sets": {
+    "full": {
+      "drop": []
+    },
+    "no_time_id": {
+      "drop": [
+        "yr",
+        "season",
+        "mnth"
+      ]
+    }
+  },
+  "primary_feature_set": "full",
+  "split": {
+    "train": 0.6,
+    "calibration": 0.2,
+    "test": 0.2,
+    "dev": {
+      "train": 0.6,
+      "calibration": 0.2,
+      "test": 0.2
+    }
+  },
+  "models": {
+    "primary": "gbr",
+    "params": {
+      "ridge": {
+        "alpha": 1.0
+      },
+      "random_forest": {
+        "n_estimators": 200,
+        "min_samples_leaf": 2,
+        "max_features": 0.5,
+        "n_jobs": 1
+      },
+      "gbr": {
+        "n_estimators": 300,
+        "learning_rate": 0.05,
+        "max_depth": 5,
+        "subsample": 0.8
+      },
+      "hgb": {
+        "max_iter": 300,
+        "learning_rate": 0.05
+      }
+    },
+    "cqr": {
+      "kind": "hgb",
+      "params": {
+        "max_iter": 300,
+        "learning_rate": 0.05,
+        "min_samples_leaf": 40
+      }
+    }
+  },
+  "conformal": {
+    "alpha": 0.1,
+    "alphas_sensitivity": [
+      0.2,
+      0.1,
+      0.05
+    ],
+    "inf_fallback": "max_score"
+  },
+  "methods": {
+    "point": {
+      "kind": "point"
+    },
+    "static": {
+      "kind": "static"
+    },
+    "rolling": {
+      "kind": "rolling",
+      "window": 50
+    },
+    "weighted": {
+      "kind": "weighted",
+      "decay": 0.02,
+      "max_buffer": 3000
+    },
+    "aci": {
+      "kind": "aci",
+      "gamma": 0.05,
+      "window": 1000
+    },
+    "da_acp": {
+      "kind": "da_acp",
+      "kernel": "exponential",
+      "decay": 0.01,
+      "decay_fast": 0.02,
+      "boost_duration": 200,
+      "anneal": "linear",
+      "pre_drift_weight": 1.0,
+      "min_keep": 50,
+      "max_buffer": 3000,
+      "rolling_updates": true,
+      "drift_enabled": true,
+      "drift_stream": "abs",
+      "ph_delta": 0.1,
+      "ph_threshold": 30.0,
+      "ph_min_instances": 30,
+      "ph_direction": "increase"
+    },
+    "cqr_static": {
+      "kind": "static",
+      "score": "cqr"
+    },
+    "cqr_da_acp": {
+      "kind": "da_acp",
+      "score": "cqr",
+      "inherit_from": "da_acp"
+    }
+  },
+  "evaluation": {
+    "rolling_window": 100,
+    "worst_window": 250,
+    "recovery_tol": 0.05,
+    "recovery_sustain": 50,
+    "post_shift_horizon": 500
+  },
+  "experiment": {
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "n_jobs": 2,
+    "output_dir": "results",
+    "save_predictions": "first_seed",
+    "hparams_file": "configs/selected_hparams.yaml"
+  },
+  "shifts": {
+    "scenarios": {
+      "iid_control": {
+        "split": "iid",
+        "shift": {
+          "type": "none"
+        }
+      },
+      "natural": {
+        "shift": {
+          "type": "none"
+        }
+      },
+      "gradual_covariate": {
+        "shift": {
+          "type": "gradual_covariate",
+          "features": [
+            "temp",
+            "atemp",
+            "hum"
+          ],
+          "magnitude": 1.5,
+          "start_frac": 0.1,
+          "end_frac": 0.9
+        }
+      },
+      "abrupt_covariate": {
+        "shift": {
+          "type": "abrupt_covariate",
+          "features": [
+            "temp",
+            "atemp",
+            "hum"
+          ],
+          "magnitude": 1.5,
+          "change_frac": 0.3,
+          "change_jitter": 0.05
+        }
+      },
+      "covariate_resample": {
+        "shift": {
+          "type": "covariate_resample",
+          "favor_col": "hr",
+          "favor_values": [
+            7,
+            8,
+            9,
+            16,
+            17,
+            18,
+            19
+          ],
+          "keep_prob_other": 0.15,
+          "change_frac": 0.3,
+          "change_jitter": 0.05
+        }
+      },
+      "noise": {
+        "shift": {
+          "type": "noise",
+          "magnitude": 0.5,
+          "change_frac": 0.3,
+          "change_jitter": 0.05,
+          "ramp_length": 0
+        }
+      },
+      "conditional": {
+        "shift": {
+          "type": "conditional",
+          "factor": 1.5,
+          "subset": {
+            "workingday": [
+              1
+            ]
+          },
+          "subset_fraction": 1.0,
+          "change_frac": 0.3,
+          "change_jitter": 0.05
+        }
+      }
+    },
+    "controlled": [
+      "gradual_covariate",
+      "abrupt_covariate",
+      "covariate_resample",
+      "noise",
+      "conditional"
+    ]
+  },
+  "experiments": {
+    "tuning": {
+      "seeds": [
+        100,
+        101,
+        102
+      ],
+      "scenarios": [
+        "natural",
+        "gradual_covariate",
+        "abrupt_covariate",
+        "covariate_resample",
+        "noise",
+        "conditional"
+      ],
+      "criterion": "interval_score",
+      "grids": {
+        "rolling": {
+          "window": [
+            50,
+            100,
+            250,
+            500,
+            1000
+          ]
+        },
+        "weighted": {
+          "decay": [
+            0.0005,
+            0.001,
+            0.002,
+            0.005,
+            0.01,
+            0.02,
+            0.05
+          ]
+        },
+        "aci": {
+          "gamma": [
+            0.001,
+            0.005,
+            0.01,
+            0.05,
+            0.1,
+            0.2
+          ]
+        },
+        "da_acp": {
+          "decay": [
+            0.001,
+            0.002,
+            0.005,
+            0.01
+          ],
+          "decay_fast": [
+            0.01,
+            0.02,
+            0.05
+          ],
+          "ph_threshold": [
+            15.0,
+            30.0,
+            60.0
+          ],
+          "pre_drift_weight": [
+            1.0,
+            0.1
+          ]
+        }
+      }
+    },
+    "ablation": {
+      "scenarios": [
+        "natural",
+        "gradual_covariate",
+        "abrupt_covariate",
+        "covariate_resample",
+        "noise",
+        "conditional"
+      ],
+      "variants": {
+        "da_acp_full": {},
+        "A_no_drift_detection": {
+          "drift_enabled": false
+        },
+        "B_no_exp_weighting": {
+          "kernel": "box"
+        },
+        "C_no_rolling_updates": {
+          "rolling_updates": false
+        },
+        "no_weight_boost": {
+          "decay_fast": "__decay__"
+        },
+        "partial_reset": {
+          "pre_drift_weight": 0.1
+        },
+        "no_partial_reset": {
+          "pre_drift_weight": 1.0
+        },
+        "step_anneal": {
+          "anneal": "step"
+        },
+        "signed_residual_stream": {
+          "drift_stream": "signed",
+          "ph_direction": "both"
+        },
+        "detect_both_directions": {
+          "ph_direction": "both"
+        }
+      },
+      "decay_levels": {
+        "small": 0.0005,
+        "medium": 0.002,
+        "large": 0.01
+      },
+      "windows": [
+        100,
+        250,
+        500,
+        1000,
+        3000
+      ]
+    },
+    "sensitivity": {
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "methods": [
+        "static",
+        "rolling",
+        "weighted",
+        "aci",
+        "da_acp"
+      ],
+      "calibration_sizes": [
+        100,
+        250,
+        500,
+        1000,
+        2000,
+        null
+      ],
+      "windows": [
+        100,
+        250,
+        500,
+        1000,
+        3000
+      ],
+      "decays": [
+        0.0005,
+        0.001,
+        0.002,
+        0.005,
+        0.01,
+        0.02
+      ],
+      "ph_thresholds": [
+        5.0,
+        15.0,
+        30.0,
+        60.0,
+        120.0,
+        1000000000.0
+      ],
+      "covariate_magnitudes": [
+        0.0,
+        0.5,
+        1.0,
+        1.5,
+        2.0,
+        3.0
+      ],
+      "noise_magnitudes": [
+        0.0,
+        0.25,
+        0.5,
+        1.0,
+        1.5
+      ],
+      "conditional_factors": [
+        1.0,
+        1.25,
+        1.5,
+        2.0
+      ]
+    },
+    "generalisation": {
+      "models": [
+        "ridge",
+        "random_forest",
+        "gbr",
+        "hgb"
+      ],
+      "scenarios": [
+        "iid_control",
+        "natural",
+        "abrupt_covariate",
+        "noise",
+        "conditional"
+      ],
+      "methods": [
+        "point",
+        "static",
+        "rolling",
+        "weighted",
+        "aci",
+        "da_acp"
+      ]
+    }
+  },
+  "hparams_source": "configs/selected_hparams.yaml"
+}

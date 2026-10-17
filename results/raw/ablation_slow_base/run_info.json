@@ -1,0 +1,33 @@
+{
+  "python": "3.13.14 (main, Jul 14 2026, 04:45:36) [GCC 14.2.0]",
+  "platform": "Linux-6.1.158+-x86_64-with-glibc2.41",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "sklearn": "1.6.1",
+  "scipy": "1.17.1",
+  "timestamp": "2026-09-23 06:03:44",
+  "n_rows": 540,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "variants": [
+    "weighted_l0.0005",
+    "da_acp_l0.0005",
+    "da_acp_reset_l0.0005",
+    "weighted_l0.001",
+    "da_acp_l0.001",
+    "da_acp_reset_l0.001",
+    "weighted_l0.002",
+    "da_acp_l0.002",
+    "da_acp_reset_l0.002"
+  ]
+}

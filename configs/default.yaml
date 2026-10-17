@@ -1,0 +1,94 @@
+# =============================================================================
+# Adaptive Conformal Prediction under Distribution Shift - master configuration
+# All paths are relative to the repository root.  Every experiment saves the
+# fully-resolved configuration next to its results (config.json).
+# =============================================================================
+
+data:
+  source: bike_sharing          # 'bike_sharing' (auto-download) | 'csv'
+  path: data/raw/hour.csv
+  date_col: dteday              # timestamp = date_col + hour_col hours
+  hour_col: hr
+  timestamp_col: null           # alternatively a single parseable timestamp column
+  target: cnt
+  # Columns that must never be used as features (casual + registered == cnt).
+  forbidden_features: [casual, registered, instant, dteday]
+
+features:
+  numeric: [temp, atemp, hum, windspeed]
+  binary: [holiday, workingday, yr]
+  categorical: [weathersit, season, weekday]
+  cyclic: {hr: 24, mnth: 12, weekday: 7}   # sin/cos(2*pi*v/period), stateless
+  onehot_extra: [hr]                        # hour also one-hot (strong daily profile)
+
+# Named feature sets.  'no_time_id' removes variables that encode chronological
+# position (yr; season/mnth encode position within the year).
+feature_sets:
+  full: {drop: []}
+  no_time_id: {drop: [yr, season, mnth]}
+primary_feature_set: full
+
+split:
+  train: 0.6
+  calibration: 0.2
+  test: 0.2
+  # Development protocol used for ALL hyperparameter choices: a chronological
+  # train/cal/test split nested inside the outer TRAINING portion only.
+  dev: {train: 0.6, calibration: 0.2, test: 0.2}
+
+models:
+  primary: gbr
+  params:
+    ridge: {alpha: 1.0}
+    random_forest: {n_estimators: 200, min_samples_leaf: 2, max_features: 0.5, n_jobs: 1}
+    gbr: {n_estimators: 300, learning_rate: 0.05, max_depth: 5, subsample: 0.8}
+    hgb: {max_iter: 300, learning_rate: 0.05}
+  cqr: {kind: hgb, params: {max_iter: 300, learning_rate: 0.05, min_samples_leaf: 40}}
+
+conformal:
+  alpha: 0.10                   # nominal coverage 90%
+  alphas_sensitivity: [0.20, 0.10, 0.05]
+  inf_fallback: max_score       # replace +inf thresholds by the largest available score (counted)
+
+# Method definitions.  Hyperparameters marked (tuned) are overwritten by
+# configs/selected_hparams.yaml, which is produced by
+# `python -m experiments.run_tuning` on the development split (never the test set).
+methods:
+  point:      {kind: point}
+  static:     {kind: static}
+  rolling:    {kind: rolling, window: 500}                         # window (tuned)
+  weighted:   {kind: weighted, decay: 0.002, max_buffer: 3000}     # decay (tuned)
+  aci:        {kind: aci, gamma: 0.005, window: 1000}              # gamma (tuned)
+  da_acp:
+    kind: da_acp
+    kernel: exponential         # 'exponential' | 'box' (ablation B)
+    decay: 0.002                # lambda_0, baseline recency decay (tuned)
+    decay_fast: 0.02            # lambda after a drift alarm (tuned)
+    boost_duration: 200         # steps over which lambda anneals back to lambda_0
+    anneal: linear              # 'linear' | 'step'
+    pre_drift_weight: 1.0       # multiplier for scores before estimated onset (tuned; 1 = no partial reset)
+    min_keep: 50                # newest scores never down-weighted by the partial reset
+    max_buffer: 3000            # rolling calibration buffer length
+    rolling_updates: true       # false -> frozen buffer refreshed only on drift (ablation C)
+    drift_enabled: true         # false -> ablation A
+    drift_stream: abs           # 'abs' | 'signed'
+    ph_delta: 0.1               # Page-Hinkley tolerance (units of mean calibration residual)
+    ph_threshold: 30.0          # Page-Hinkley alarm threshold (tuned)
+    ph_min_instances: 30
+    ph_direction: increase      # 'increase' | 'decrease' | 'both'
+  cqr_static: {kind: static, score: cqr}
+  cqr_da_acp: {kind: da_acp, score: cqr, inherit_from: da_acp}
+
+evaluation:
+  rolling_window: 100           # time-local coverage window (plots, recovery)
+  worst_window: 250             # window for worst-window coverage
+  recovery_tol: 0.05            # |rolling coverage - nominal| <= tol
+  recovery_sustain: 50          # ... for this many consecutive steps
+  post_shift_horizon: 500       # coverage over the first H steps after the change point
+
+experiment:
+  seeds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  n_jobs: 2
+  output_dir: results
+  save_predictions: first_seed  # all | first_seed | none  (per-step traces for ALL seeds are always saved)
+  hparams_file: configs/selected_hparams.yaml

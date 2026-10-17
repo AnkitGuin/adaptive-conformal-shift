@@ -1,0 +1,26 @@
+_comment: Selected on the development protocol by experiments/run_tuning.py; frozen
+  for test runs.
+criterion: mean relative interval score (method / static) over dev scenarios and seeds
+dev_seeds:
+- 100
+- 101
+- 102
+dev_scenarios:
+- natural
+- gradual_covariate
+- abrupt_covariate
+- covariate_resample
+- noise
+- conditional
+methods:
+  aci:
+    gamma: 0.05
+  da_acp:
+    decay: 0.01
+    decay_fast: 0.02
+    ph_threshold: 30.0
+    pre_drift_weight: 1.0
+  rolling:
+    window: 50
+  weighted:
+    decay: 0.02

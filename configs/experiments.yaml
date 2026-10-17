@@ -1,0 +1,53 @@
+# Settings for the ablation, sensitivity, tuning and generalisation experiments.
+tuning:
+  seeds: [100, 101, 102]        # dev seeds, disjoint from test seeds
+  scenarios: [natural, gradual_covariate, abrupt_covariate, covariate_resample, noise, conditional]
+  criterion: interval_score     # mean interval score averaged over dev scenarios (lower is better)
+  grids:
+    rolling:  {window: [50, 100, 250, 500, 1000]}   # grid v2: 50 added (v1 optimum was on the boundary)
+    weighted: {decay: [0.0005, 0.001, 0.002, 0.005, 0.01, 0.02, 0.05]}   # v2: 0.02, 0.05 added
+    aci:      {gamma: [0.001, 0.005, 0.01, 0.05, 0.1, 0.2]}   # v2: 0.1, 0.2 added
+    da_acp:
+      decay: [0.001, 0.002, 0.005, 0.01]       # v2: 0.01 added
+      decay_fast: [0.01, 0.02, 0.05]
+      ph_threshold: [15.0, 30.0, 60.0]
+      pre_drift_weight: [1.0, 0.1]
+
+ablation:
+  scenarios: [natural, gradual_covariate, abrupt_covariate, covariate_resample, noise, conditional]
+  variants:
+    da_acp_full: {}
+    A_no_drift_detection: {drift_enabled: false}
+    B_no_exp_weighting: {kernel: box}
+    C_no_rolling_updates: {rolling_updates: false}
+    no_weight_boost: {decay_fast: __decay__}             # detector on, but alarm does not change lambda
+    partial_reset: {pre_drift_weight: 0.1}
+    no_partial_reset: {pre_drift_weight: 1.0}
+    step_anneal: {anneal: step}
+    signed_residual_stream: {drift_stream: signed, ph_direction: both}
+    detect_both_directions: {ph_direction: both}
+  decay_levels: {small: 0.0005, medium: 0.002, large: 0.01}   # Ablation D
+  # Follow-up (added after the main ablation showed no detector benefit at the tuned lambda_0 = 0.01):
+  # does the detector help when the baseline weighting is SLOW?  Pre-registered comparison:
+  # weighted(lambda) vs DA-ACP(lambda_0 = lambda, lambda_fast = 0.02) (+/- partial reset), for slow lambda.
+  slow_base:
+    decays: [0.0005, 0.001, 0.002]
+    decay_fast: 0.02
+    pre_drift_weight_reset: 0.1
+  windows: [100, 250, 500, 1000, 3000]                          # Ablation E (max_buffer)
+
+sensitivity:
+  seeds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  methods: [static, rolling, weighted, aci, da_acp]
+  calibration_sizes: [100, 250, 500, 1000, 2000, null]  # null = full calibration split
+  windows: [100, 250, 500, 1000, 3000]
+  decays: [0.0005, 0.001, 0.002, 0.005, 0.01, 0.02]
+  ph_thresholds: [5.0, 15.0, 30.0, 60.0, 120.0, 1000000000.0]   # last value = detector never fires
+  covariate_magnitudes: [0.0, 0.5, 1.0, 1.5, 2.0, 3.0]
+  noise_magnitudes: [0.0, 0.25, 0.5, 1.0, 1.5]
+  conditional_factors: [1.0, 1.25, 1.5, 2.0]
+
+generalisation:
+  models: [ridge, random_forest, gbr, hgb]
+  scenarios: [iid_control, natural, abrupt_covariate, noise, conditional]
+  methods: [point, static, rolling, weighted, aci, da_acp]

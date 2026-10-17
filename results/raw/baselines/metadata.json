@@ -1,0 +1,3762 @@
+{
+  "ridge|full|natural|0": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|full|abrupt_covariate|0": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 1067,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "ridge|full|noise|0": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 1086,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "ridge|full|conditional|0": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 969,
+    "n_affected": 1689,
+    "affected_share_post": 0.673713601914639,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "ridge|full|iid_control|0": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|no_time_id|natural|0": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|no_time_id|iid_control|0": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|full|natural|1": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|full|abrupt_covariate|1": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 1189,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "ridge|full|noise|1": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 1030,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "ridge|full|conditional|1": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 973,
+    "n_affected": 1688,
+    "affected_share_post": 0.6743907311226528,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "ridge|full|iid_control|1": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|no_time_id|natural|1": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|no_time_id|iid_control|1": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|full|natural|2": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|full|abrupt_covariate|2": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 1027,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "ridge|full|noise|2": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 1138,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "ridge|full|conditional|2": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 1035,
+    "n_affected": 1626,
+    "affected_share_post": 0.6661204424416223,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "ridge|full|iid_control|2": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|no_time_id|natural|2": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|no_time_id|iid_control|2": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|full|natural|3": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|full|abrupt_covariate|3": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 961,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "ridge|full|noise|3": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 1051,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "ridge|full|conditional|3": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 1092,
+    "n_affected": 1569,
+    "affected_share_post": 0.6581375838926175,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "ridge|full|iid_control|3": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|no_time_id|natural|3": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|no_time_id|iid_control|3": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|full|natural|4": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|full|abrupt_covariate|4": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 1002,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "ridge|full|noise|4": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 1041,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "ridge|full|conditional|4": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 1022,
+    "n_affected": 1639,
+    "affected_share_post": 0.6678891605541972,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "ridge|full|iid_control|4": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|no_time_id|natural|4": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|no_time_id|iid_control|4": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|full|natural|5": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|full|abrupt_covariate|5": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 1090,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "ridge|full|noise|5": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 1026,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "ridge|full|conditional|5": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 1133,
+    "n_affected": 1569,
+    "affected_share_post": 0.6696542893725992,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "ridge|full|iid_control|5": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|no_time_id|natural|5": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|no_time_id|iid_control|5": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|full|natural|6": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|full|abrupt_covariate|6": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 1171,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "ridge|full|noise|6": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 970,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "ridge|full|conditional|6": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 930,
+    "n_affected": 1689,
+    "affected_share_post": 0.6633935585231736,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "ridge|full|iid_control|6": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|no_time_id|natural|6": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|no_time_id|iid_control|6": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|full|natural|7": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|full|abrupt_covariate|7": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 1214,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "ridge|full|noise|7": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 928,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "ridge|full|conditional|7": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 1069,
+    "n_affected": 1592,
+    "affected_share_post": 0.661404237640216,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "ridge|full|iid_control|7": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|no_time_id|natural|7": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|no_time_id|iid_control|7": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|full|natural|8": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|full|abrupt_covariate|8": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 1125,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "ridge|full|noise|8": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 942,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "ridge|full|conditional|8": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 919,
+    "n_affected": 1694,
+    "affected_share_post": 0.6624951114587407,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "ridge|full|iid_control|8": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|no_time_id|natural|8": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|no_time_id|iid_control|8": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|full|natural|9": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|full|abrupt_covariate|9": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 1169,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "ridge|full|noise|9": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 1044,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "ridge|full|conditional|9": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 1199,
+    "n_affected": 1510,
+    "affected_share_post": 0.663153271848924,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "ridge|full|iid_control|9": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|no_time_id|natural|9": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "ridge|no_time_id|iid_control|9": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|full|natural|0": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|full|abrupt_covariate|0": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 1067,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "random_forest|full|noise|0": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 1086,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "random_forest|full|conditional|0": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 969,
+    "n_affected": 1689,
+    "affected_share_post": 0.673713601914639,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "random_forest|full|iid_control|0": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|no_time_id|natural|0": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|no_time_id|iid_control|0": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|full|natural|1": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|full|abrupt_covariate|1": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 1189,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "random_forest|full|noise|1": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 1030,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "random_forest|full|conditional|1": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 973,
+    "n_affected": 1688,
+    "affected_share_post": 0.6743907311226528,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "random_forest|full|iid_control|1": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|no_time_id|natural|1": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|no_time_id|iid_control|1": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|full|natural|2": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|full|abrupt_covariate|2": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 1027,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "random_forest|full|noise|2": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 1138,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "random_forest|full|conditional|2": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 1035,
+    "n_affected": 1626,
+    "affected_share_post": 0.6661204424416223,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "random_forest|full|iid_control|2": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|no_time_id|natural|2": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|no_time_id|iid_control|2": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|full|natural|3": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|full|abrupt_covariate|3": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 961,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "random_forest|full|noise|3": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 1051,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "random_forest|full|conditional|3": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 1092,
+    "n_affected": 1569,
+    "affected_share_post": 0.6581375838926175,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "random_forest|full|iid_control|3": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|no_time_id|natural|3": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|no_time_id|iid_control|3": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|full|natural|4": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|full|abrupt_covariate|4": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 1002,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "random_forest|full|noise|4": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 1041,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "random_forest|full|conditional|4": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 1022,
+    "n_affected": 1639,
+    "affected_share_post": 0.6678891605541972,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "random_forest|full|iid_control|4": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|no_time_id|natural|4": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|no_time_id|iid_control|4": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|full|natural|5": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|full|abrupt_covariate|5": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 1090,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "random_forest|full|noise|5": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 1026,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "random_forest|full|conditional|5": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 1133,
+    "n_affected": 1569,
+    "affected_share_post": 0.6696542893725992,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "random_forest|full|iid_control|5": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|no_time_id|natural|5": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|no_time_id|iid_control|5": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|full|natural|6": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|full|abrupt_covariate|6": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 1171,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "random_forest|full|noise|6": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 970,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "random_forest|full|conditional|6": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 930,
+    "n_affected": 1689,
+    "affected_share_post": 0.6633935585231736,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "random_forest|full|iid_control|6": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|no_time_id|natural|6": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|no_time_id|iid_control|6": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|full|natural|7": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|full|abrupt_covariate|7": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 1214,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "random_forest|full|noise|7": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 928,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "random_forest|full|conditional|7": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 1069,
+    "n_affected": 1592,
+    "affected_share_post": 0.661404237640216,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "random_forest|full|iid_control|7": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|no_time_id|natural|7": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|no_time_id|iid_control|7": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|full|natural|8": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|full|abrupt_covariate|8": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 1125,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "random_forest|full|noise|8": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 942,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "random_forest|full|conditional|8": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 919,
+    "n_affected": 1694,
+    "affected_share_post": 0.6624951114587407,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "random_forest|full|iid_control|8": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|no_time_id|natural|8": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|no_time_id|iid_control|8": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|full|natural|9": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|full|abrupt_covariate|9": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 1169,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "random_forest|full|noise|9": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 1044,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "random_forest|full|conditional|9": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 1199,
+    "n_affected": 1510,
+    "affected_share_post": 0.663153271848924,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "random_forest|full|iid_control|9": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|no_time_id|natural|9": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "random_forest|no_time_id|iid_control|9": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|full|natural|0": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|full|abrupt_covariate|0": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 1067,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "gbr|full|noise|0": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 1086,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "gbr|full|conditional|0": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 969,
+    "n_affected": 1689,
+    "affected_share_post": 0.673713601914639,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "gbr|full|iid_control|0": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|no_time_id|natural|0": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|no_time_id|iid_control|0": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|full|natural|1": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|full|abrupt_covariate|1": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 1189,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "gbr|full|noise|1": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 1030,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "gbr|full|conditional|1": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 973,
+    "n_affected": 1688,
+    "affected_share_post": 0.6743907311226528,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "gbr|full|iid_control|1": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|no_time_id|natural|1": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|no_time_id|iid_control|1": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|full|natural|2": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|full|abrupt_covariate|2": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 1027,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "gbr|full|noise|2": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 1138,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "gbr|full|conditional|2": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 1035,
+    "n_affected": 1626,
+    "affected_share_post": 0.6661204424416223,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "gbr|full|iid_control|2": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|no_time_id|natural|2": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|no_time_id|iid_control|2": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|full|natural|3": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|full|abrupt_covariate|3": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 961,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "gbr|full|noise|3": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 1051,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "gbr|full|conditional|3": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 1092,
+    "n_affected": 1569,
+    "affected_share_post": 0.6581375838926175,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "gbr|full|iid_control|3": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|no_time_id|natural|3": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|no_time_id|iid_control|3": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|full|natural|4": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|full|abrupt_covariate|4": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 1002,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "gbr|full|noise|4": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 1041,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "gbr|full|conditional|4": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 1022,
+    "n_affected": 1639,
+    "affected_share_post": 0.6678891605541972,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "gbr|full|iid_control|4": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|no_time_id|natural|4": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|no_time_id|iid_control|4": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|full|natural|5": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|full|abrupt_covariate|5": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 1090,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "gbr|full|noise|5": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 1026,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "gbr|full|conditional|5": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 1133,
+    "n_affected": 1569,
+    "affected_share_post": 0.6696542893725992,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "gbr|full|iid_control|5": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|no_time_id|natural|5": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|no_time_id|iid_control|5": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|full|natural|6": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|full|abrupt_covariate|6": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 1171,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "gbr|full|noise|6": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 970,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "gbr|full|conditional|6": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 930,
+    "n_affected": 1689,
+    "affected_share_post": 0.6633935585231736,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "gbr|full|iid_control|6": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|no_time_id|natural|6": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|no_time_id|iid_control|6": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|full|natural|7": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|full|abrupt_covariate|7": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 1214,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "gbr|full|noise|7": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 928,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "gbr|full|conditional|7": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 1069,
+    "n_affected": 1592,
+    "affected_share_post": 0.661404237640216,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "gbr|full|iid_control|7": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|no_time_id|natural|7": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|no_time_id|iid_control|7": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|full|natural|8": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|full|abrupt_covariate|8": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 1125,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "gbr|full|noise|8": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 942,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "gbr|full|conditional|8": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 919,
+    "n_affected": 1694,
+    "affected_share_post": 0.6624951114587407,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "gbr|full|iid_control|8": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|no_time_id|natural|8": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|no_time_id|iid_control|8": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|full|natural|9": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|full|abrupt_covariate|9": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 1169,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "gbr|full|noise|9": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 1044,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "gbr|full|conditional|9": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 1199,
+    "n_affected": 1510,
+    "affected_share_post": 0.663153271848924,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "gbr|full|iid_control|9": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|no_time_id|natural|9": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "gbr|no_time_id|iid_control|9": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|full|natural|0": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|full|abrupt_covariate|0": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 1067,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "hgb|full|noise|0": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 1086,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "hgb|full|conditional|0": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 969,
+    "n_affected": 1689,
+    "affected_share_post": 0.673713601914639,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "hgb|full|iid_control|0": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|no_time_id|natural|0": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|no_time_id|iid_control|0": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|full|natural|1": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|full|abrupt_covariate|1": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 1189,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "hgb|full|noise|1": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 1030,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "hgb|full|conditional|1": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 973,
+    "n_affected": 1688,
+    "affected_share_post": 0.6743907311226528,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "hgb|full|iid_control|1": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|no_time_id|natural|1": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|no_time_id|iid_control|1": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|full|natural|2": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|full|abrupt_covariate|2": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 1027,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "hgb|full|noise|2": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 1138,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "hgb|full|conditional|2": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 1035,
+    "n_affected": 1626,
+    "affected_share_post": 0.6661204424416223,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "hgb|full|iid_control|2": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|no_time_id|natural|2": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|no_time_id|iid_control|2": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|full|natural|3": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|full|abrupt_covariate|3": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 961,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "hgb|full|noise|3": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 1051,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "hgb|full|conditional|3": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 1092,
+    "n_affected": 1569,
+    "affected_share_post": 0.6581375838926175,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "hgb|full|iid_control|3": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|no_time_id|natural|3": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|no_time_id|iid_control|3": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|full|natural|4": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|full|abrupt_covariate|4": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 1002,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "hgb|full|noise|4": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 1041,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "hgb|full|conditional|4": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 1022,
+    "n_affected": 1639,
+    "affected_share_post": 0.6678891605541972,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "hgb|full|iid_control|4": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|no_time_id|natural|4": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|no_time_id|iid_control|4": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|full|natural|5": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|full|abrupt_covariate|5": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 1090,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "hgb|full|noise|5": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 1026,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "hgb|full|conditional|5": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 1133,
+    "n_affected": 1569,
+    "affected_share_post": 0.6696542893725992,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "hgb|full|iid_control|5": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|no_time_id|natural|5": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|no_time_id|iid_control|5": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|full|natural|6": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|full|abrupt_covariate|6": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 1171,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "hgb|full|noise|6": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 970,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "hgb|full|conditional|6": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 930,
+    "n_affected": 1689,
+    "affected_share_post": 0.6633935585231736,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "hgb|full|iid_control|6": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|no_time_id|natural|6": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|no_time_id|iid_control|6": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|full|natural|7": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|full|abrupt_covariate|7": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 1214,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "hgb|full|noise|7": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 928,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "hgb|full|conditional|7": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 1069,
+    "n_affected": 1592,
+    "affected_share_post": 0.661404237640216,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "hgb|full|iid_control|7": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|no_time_id|natural|7": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|no_time_id|iid_control|7": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|full|natural|8": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|full|abrupt_covariate|8": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 1125,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "hgb|full|noise|8": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 942,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "hgb|full|conditional|8": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 919,
+    "n_affected": 1694,
+    "affected_share_post": 0.6624951114587407,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "hgb|full|iid_control|8": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|no_time_id|natural|8": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|no_time_id|iid_control|8": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|full|natural|9": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|full|abrupt_covariate|9": {
+    "type": "abrupt_covariate",
+    "features": [
+      "temp",
+      "atemp",
+      "hum"
+    ],
+    "magnitude_std_units": 1.5,
+    "delta_raw_units": {
+      "temp": 0.29607487782618636,
+      "atemp": 0.26597115709716646,
+      "hum": 0.2966488014181569
+    },
+    "change_point": 1169,
+    "config": {
+      "type": "abrupt_covariate",
+      "features": [
+        "temp",
+        "atemp",
+        "hum"
+      ],
+      "magnitude": 1.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "hgb|full|noise|9": {
+    "type": "noise",
+    "magnitude_rel": 0.5,
+    "scale": 134.6206547189871,
+    "sigma_post": 67.31032735949356,
+    "change_point": 1044,
+    "ramp_length": 0,
+    "config": {
+      "type": "noise",
+      "magnitude": 0.5,
+      "change_frac": 0.3,
+      "change_jitter": 0.05,
+      "ramp_length": 0
+    }
+  },
+  "hgb|full|conditional|9": {
+    "type": "conditional",
+    "factor": 1.5,
+    "subset": {
+      "workingday": [
+        1
+      ]
+    },
+    "subset_fraction": 1.0,
+    "change_point": 1199,
+    "n_affected": 1510,
+    "affected_share_post": 0.663153271848924,
+    "config": {
+      "type": "conditional",
+      "factor": 1.5,
+      "subset": {
+        "workingday": [
+          1
+        ]
+      },
+      "subset_fraction": 1.0,
+      "change_frac": 0.3,
+      "change_jitter": 0.05
+    }
+  },
+  "hgb|full|iid_control|9": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|no_time_id|natural|9": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  },
+  "hgb|no_time_id|iid_control|9": {
+    "type": "none",
+    "change_point": null,
+    "config": {
+      "type": "none"
+    }
+  }
+}

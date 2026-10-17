@@ -1,0 +1,24 @@
+# Distribution-shift scenarios applied to the TEST stream only.
+# change_frac / start_frac are fractions of the test stream; change_jitter
+# randomises the change point per seed (+/- fraction).  Covariate magnitudes
+# are in units of the TRAINING standard deviation of each feature; noise
+# magnitude is in units of the TRAINING target standard deviation.
+scenarios:
+  iid_control:                  # Scenario A (exchangeable control): random split membership
+    split: iid
+    shift: {type: none}
+  natural:                      # Scenario A' : chronological split, no synthetic shift (real temporal drift only)
+    shift: {type: none}
+  gradual_covariate:            # Scenario B
+    shift: {type: gradual_covariate, features: [temp, atemp, hum], magnitude: 1.5, start_frac: 0.1, end_frac: 0.9}
+  abrupt_covariate:             # Scenario C
+    shift: {type: abrupt_covariate, features: [temp, atemp, hum], magnitude: 1.5, change_frac: 0.3, change_jitter: 0.05}
+  covariate_resample:           # Scenario C' : pure covariate shift, P(Y|X) unchanged
+    shift: {type: covariate_resample, favor_col: hr, favor_values: [7, 8, 9, 16, 17, 18, 19], keep_prob_other: 0.15, change_frac: 0.3, change_jitter: 0.05}
+  noise:                        # Scenario D
+    shift: {type: noise, magnitude: 0.5, change_frac: 0.3, change_jitter: 0.05, ramp_length: 0}
+  conditional:                  # Scenario E : y' = 1.5 y on working days after the change point
+    shift: {type: conditional, factor: 1.5, subset: {workingday: [1]}, subset_fraction: 1.0, change_frac: 0.3, change_jitter: 0.05}
+
+# Scenarios used by ablation/sensitivity (the controlled synthetic shifts + natural)
+controlled: [gradual_covariate, abrupt_covariate, covariate_resample, noise, conditional]
